@@ -45,3 +45,9 @@ nnoremap <leader>e :ex .<CR>
 
 "colorscheme darkblue
 colorscheme elflord
+
+"tmux
+nnoremap <leader>ww :w<bar>!tmux send-keys -t bottom "$(realpath %)" Enter<CR>
+nnoremap <leader>wc :w<bar>!tmux send-keys -t bottom "clear" Enter<CR>
+nnoremap <leader>wr :w<bar>!tmux send-keys -t right "$(realpath %)" Enter<CR>
+nnoremap <leader>rc :w<bar>!tmux send-keys -t right "clear" Enter<CR>
