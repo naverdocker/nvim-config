@@ -3,4 +3,4 @@
 ### Included Configurations
 
 - This repository contains config for primarily Neovim
-- however also contain config for vim to try to maintain equivalent version.
+- however also contain config of Vim to maintain equivalent .vimrc version.

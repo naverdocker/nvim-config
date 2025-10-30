@@ -1,2 +1,7 @@
-view
+spell/
+view/
+swap/
+undo/
+session/
+shada/
 session.vim
