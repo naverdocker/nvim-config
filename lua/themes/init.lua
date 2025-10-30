@@ -14,3 +14,14 @@ end
 if default_highlights then
     require('highlights').default_apply()
 end
+
+--vim.api.nvim_create_autocmd("ColorScheme", {
+--  callback = function()
+--    vim.cmd [[
+--      hi Normal guibg=none ctermbg=none
+--      hi LineNr guibg=none
+--      hi SignColumn guibg=none
+--      hi EndOfBuffer guibg=none
+--    ]]
+--  end,
+--})
