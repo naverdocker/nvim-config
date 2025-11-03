@@ -46,6 +46,12 @@ nnoremap <leader>e :ex .<CR>
 "colorscheme darkblue
 colorscheme elflord
 
+"comment
+nnoremap <silent> <leader>3 :s/^/# /<CR>:nohlsearch<CR>
+nnoremap <silent> <leader>u :s/^# //<CR>:nohlsearch<CR>
+xnoremap <silent> <leader>3 :s/^/# /<CR>:nohlsearch<CR>
+xnoremap <silent> <leader>u :s/^# \?//<CR>:nohlsearch<CR>
+
 "tmux
 nnoremap <leader>ww :w<bar>!tmux send-keys -t bottom "$(realpath %)" Enter<CR>
 nnoremap <leader>wc :w<bar>!tmux send-keys -t bottom "clear" Enter<CR>
