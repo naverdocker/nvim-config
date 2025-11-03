@@ -79,9 +79,9 @@ vim.keymap.set('n', '<leader>3', function()
     local line = vim.fn.getline(lnum)
 
     if line:match('^%s*#%s?') then
-        line = line:gsub('^%s*#%s?', '', 1)
+        line = line:gsub('^%s*#', '', 1)
     else
-        line = '# ' .. line
+        line = '#' .. line
     end
 
     vim.fn.setline(lnum, line)
