@@ -72,3 +72,17 @@ vim.keymap.set('n', '<leader>rc', function()
     vim.fn.system('tmux send-keys -t right "clear" Enter')
     print("🧹 Cleared tmux right pane")
 end, { noremap = true, silent = true })
+
+-- toggle comment for current line (# based)
+vim.keymap.set('n', '<leader>3', function()
+    local lnum = vim.fn.line('.')
+    local line = vim.fn.getline(lnum)
+
+    if line:match('^%s*#%s?') then
+        line = line:gsub('^%s*#%s?', '', 1)
+    else
+        line = '# ' .. line
+    end
+
+    vim.fn.setline(lnum, line)
+end, { silent = true, desc = 'Toggle comment (normal)' })
