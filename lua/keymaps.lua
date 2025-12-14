@@ -83,6 +83,12 @@ vim.keymap.set('n', '<leader>wc', function()
     print("🧹 Cleared tmux bottom pane")
 end, { noremap = true, silent = true })
 
+-- Send Ctrl+C to bottom pane
+vim.keymap.set('n', '<leader>cv', function()
+    vim.fn.system('tmux send-keys -t {down-of} C-c')
+    print("🛑 Sent Ctrl+C to bottom tmux pane")
+end, { noremap = true, silent = true })
+
 -- Send current file path to right tmux pane
 vim.keymap.set('n', '<leader>wr', function()
     vim.cmd('write')
@@ -96,6 +102,12 @@ end, { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>rc', function()
     vim.fn.system('tmux send-keys -t right "clear" Enter')
     print("🧹 Cleared tmux right pane")
+end, { noremap = true, silent = true })
+
+-- Send Ctrl+C to right pane
+vim.keymap.set('n', '<leader>cr', function()
+    vim.fn.system('tmux send-keys -t right C-c')
+    print("🛑 Sent Ctrl+C to right tmux pane")
 end, { noremap = true, silent = true })
 
 
