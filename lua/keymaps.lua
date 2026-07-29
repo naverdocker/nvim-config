@@ -41,6 +41,9 @@ vim.keymap.set('n', '<leader>sp', function()
     print('Spell checking ' .. (vim.opt.spell:get() and 'enabled' or 'disabled'))
 end, { noremap = true, silent = true })
 
+-- Insert Mode Escape
+vim.keymap.set('i', 'kj', '<Esc>', { noremap = true, silent = true })
+
 -- Insert Mode Auto-pairing
 vim.keymap.set('i', '<leader>"', '""<Left>', { noremap = true, silent = true })
 vim.keymap.set('i', "<leader>'", "''<Left>", { noremap = true, silent = true })
